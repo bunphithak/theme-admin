@@ -1,5 +1,5 @@
 {
-  "name": "five-star",
+  "name": "themes-admin",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -19,6 +19,11 @@
     "@angular/platform-browser": "~8.2.14",
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
+    "@types/jquery": "^3.3.32",
+    "angularfire2": "^5.4.2",
+    "chart.js": "^2.9.3",
+    "firebase": "^7.8.2",
+    "jquery": "^3.4.1",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"

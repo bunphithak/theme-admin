@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "five-star": {
+    "themes-admin": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/five-star",
+            "outputPath": "dist/themes-admin",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,9 +28,15 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/theme-admin/css/style.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "src/assets/theme-admin/javascript/popper.js",
+              "src/assets/theme-admin/javascript/bootstrap.min.js",
+              "src/assets/theme-admin/javascript/main.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -67,18 +73,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "five-star:build"
+            "browserTarget": "themes-admin:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "five-star:build:production"
+              "browserTarget": "themes-admin:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "five-star:build"
+            "browserTarget": "themes-admin:build"
           }
         },
         "test": {
@@ -115,15 +121,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "five-star:serve"
+            "devServerTarget": "themes-admin:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "five-star:serve:production"
+              "devServerTarget": "themes-admin:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "five-star"
+  "defaultProject": "themes-admin"
 }
