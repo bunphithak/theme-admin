@@ -1,0 +1,164 @@
+<h1>Account</h1>
+<form [formGroup]="accountForm">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <label>สาขา</label>
+        <input type="text" class="form-control" formControlName="branch" />
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label>วันที่ทำรายการ</label>
+        <input
+          type="text"
+          class="form-control"
+          matInput
+          formControlName="transaction_date"
+          (click)="transaction_date.open()"
+          [matDatepicker]="transaction_date"
+        />
+        <mat-datepicker-toggle
+          matSuffix
+          [for]="transaction_date"
+          class="icon-calendar"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #transaction_date></mat-datepicker>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <label>เดือนบิล</label>
+        <input
+          type="text"
+          class="form-control"
+          panelClass="example-month-picker"
+          formControlName="month_bill"
+          (click)="month_bill.open()"
+          [matDatepicker]="month_bill"
+        />
+        <mat-datepicker-toggle
+          matSuffix
+          [for]="month_bill"
+          class="icon-calendar"
+        ></mat-datepicker-toggle>
+        <mat-datepicker
+          #month_bill
+          startView="year"
+          [startAt]="startDate"
+          (monthSelected)="chosenMonthHandler($event, month_bill)"
+        ></mat-datepicker>
+      </div>
+    </div>
+  </div>
+  <div formArrayName="items">
+    <table>
+      <tr>
+        <th width="10%">วันที่</th>
+        <th>ยอดรวมเงินขาย</th>
+        <th>ยอดหักค่าใช่จ่าย</th>
+        <th>ยอดโอนเงิน</th>
+        <th>ค้างโอนขาย</th>
+        <th>ค่าแรง</th>
+        <th>ค่าแรงพิเศษ</th>
+        <th>ค่าสินค้าเข้า</th>
+        <th>ค่าข้าวเหนียว</th>
+        <th>ซื้อน้ำมัน</th>
+        <th width="20%">รายละเอียดอื่นๆ</th>
+        <th>รายจ่าย</th>
+        <th>ของเสีย</th>
+        <th>รายรับ</th>
+      </tr>
+      <tr
+        *ngFor="let item of accountForm.get('items').controls; let i = index"
+        [formGroupName]="i"
+      >
+        <td width="10%">
+          <div class="form-group">
+            <input
+              formControlName="account_date"
+              type="text"
+              class="form-control"
+              readonly
+            />
+          </div>
+        </td>
+        <td>
+          <div class="form-group">
+            <input type="text" class="form-control" />
+          </div>
+        </td>
+        <td>
+          <div class="form-group">
+            <input type="text" class="form-control" />
+          </div>
+        </td>
+        <td>
+          <div class="form-group">
+            <input type="text" class="form-control" />
+          </div>
+        </td>
+        <td>
+          <div class="form-group">
+            <input type="text" class="form-control" />
+          </div>
+        </td>
+        <td>
+          <div class="form-group">
+            <input type="text" class="form-control" />
+          </div>
+        </td>
+        <td>
+          <div class="form-group">
+            <input type="text" class="form-control" />
+          </div>
+        </td>
+        <td>
+          <div class="form-group">
+            <input type="text" class="form-control" />
+          </div>
+        </td>
+        <td>
+          <div class="form-group">
+            <input type="text" class="form-control" />
+          </div>
+        </td>
+        <td>
+          <div class="form-group">
+            <input type="text" class="form-control" />
+          </div>
+        </td>
+        <td width="20%">
+          <div class="form-group">
+            <input type="text" class="form-control" />
+          </div>
+        </td>
+        <td>
+          <div class="form-group">
+            <input type="text" class="form-control" />
+          </div>
+        </td>
+        <td>
+          <div class="form-group">
+            <input type="text" class="form-control" />
+          </div>
+        </td>
+        <td>
+          <div class="form-group">
+            <input type="text" class="form-control" />
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <div class="row">
+      <div class="col-md-12">
+        <button type="button" class="btn btn-primary">
+          <i class="fas fa-plus-circle"></i> เพิ่ม
+        </button>
+      </div>
+    </div>
+  </div>
+</form>

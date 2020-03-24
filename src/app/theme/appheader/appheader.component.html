@@ -12,32 +12,53 @@
       >
     </h1>
     <ul class="list-unstyled components mb-5">
-      <li class="active">
-        <a href="#"><span class="fa fa-home mr-3"></span> Home</a>
+      <li routerLinkActive="active">
+        <a routerLink="/dashboard"
+          ><span class="fa fa-home mr-3"></span> Home</a
+        >
       </li>
-      <li>
-        <a href="#"><span class="fa fa-user mr-3"></span> About</a>
+      <li routerLinkActive="active">
+        <a routerLink="/accountSummary"
+          ><span class="fas fa-file-invoice-dollar mr-3"></span>Account</a
+        >
       </li>
-      <li>
-        <a href="#workSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span class="fa fa-briefcase mr-3"></span>Works</a>
+      <li routerLinkActive="active">
+        <a routerLink="/branch"
+          ><span class="fas fa-store mr-3"></span>Branch</a
+        >
+      </li>
+      <!-- <li routerLinkActive="active">
+        <a
+          href="#workSubmenu"
+          data-toggle="collapse"
+          aria-expanded="false"
+          class="dropdown-toggle"
+          ><span class="fa fa-briefcase mr-3"></span>Works</a
+        >
         <ul class="collapse list-unstyled" id="workSubmenu">
           <li>
-              <a href="#">Works 1</a>
+            <a href="#">Works 1</a>
           </li>
           <li>
-              <a href="#">Works 2</a>
+            <a href="#">Works 2</a>
           </li>
           <li>
-            <a href="#subWorkSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span class="fa fa-briefcase mr-3"></span>Sub Works</a>
+            <a
+              href="#subWorkSubmenu"
+              data-toggle="collapse"
+              aria-expanded="false"
+              class="dropdown-toggle"
+              ><span class="fa fa-briefcase mr-3"></span>Sub Works</a
+            >
             <ul class="collapse list-unstyled" id="subWorkSubmenu">
               <li>
-                  <a href="#">Sub Works 1</a>
+                <a href="#">Sub Works 1</a>
               </li>
               <li>
-                  <a href="#">Sub Works 2</a>
+                <a href="#">Sub Works 2</a>
               </li>
               <li>
-                  <a href="#">Sub Works 3</a>
+                <a href="#">Sub Works 3</a>
               </li>
             </ul>
           </li>
@@ -54,7 +75,7 @@
       </li>
       <li>
         <a href="#"><span class="fa fa-paper-plane mr-3"></span> Contacts</a>
-      </li>
+      </li> -->
     </ul>
     <div class="footer"></div>
   </div>

@@ -43,7 +43,7 @@ export class DashboardComponent implements OnInit {
             backgroundColor: '#3666B8',
             borderColor: '#3666B8',
             fill: false,
-            data: [100, 33, 22, 19, 11, 49, 30]
+            data: [200, 33, 22, 19, 11, 49, 30]
           },
           {
             label: 'My Second dataset',
@@ -59,7 +59,7 @@ export class DashboardComponent implements OnInit {
         // maintainAspectRatio: false,
         borderWidth: 1,
         legend: {
-          display: false,
+          // display: false,
           labels: {
             boxWidth: 20,
           },
